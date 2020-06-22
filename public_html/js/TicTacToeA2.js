@@ -60,14 +60,24 @@ function cellClicked(cell) {
 
     //TODO: 1-5 should occur only when the selected cell is empty and the game is 
     // still in progress!
-
+    //If the game is in progress and there are empty cells left,
+    //continue and reduce empty cells for each clicked.
+    if(empty > 0 && !gameOver){
     // TODO: decrease # of empty cells by 1
-    
+    //Post decrements empty by 1 each time invoked, if checked
+        empty--;
     // TODO: document this code from class
+    //This sets the cell according to the current player.
     cell.innerHTML = player;
+    //Invokes the checkWin function to check for a win
     checkWin();    
+    //Changes the playey after each click, if it is X switch to O,
+    //if player is O switch to X
     player = (player === "X") ? "O" : "X";
+    //Updates the page to show the current player (who's turn)
     document.getElementById("player").innerHTML = player;
+    } 
+    
 }
 
 /* Function checkWin() is called to check all winning combinations and display results
