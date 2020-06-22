@@ -10,6 +10,7 @@ body {
     margin: 0 auto;
     text-align: center;
     width: 680px;
+    background-color: lightcyan;
 }
 
 /* formatting for game board table */

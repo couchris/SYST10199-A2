@@ -30,14 +30,17 @@ var gameOver = false;
 function resetGame() {
 
     // TODO: document this code from class
+    //loops through the variable board which stores all the td
+    //tags and resets the html within them to blank
     for ( i = 0; i < board.length; i++) {
         board[i].innerHTML = "";
     }
   
     // TODO reset player back to X and update it on the page
-    
+    document.getElementById("player").innerHTML = "X";
 
     // TODO reset gameOver and # of empty cells
+    var gameOver = false;
 }
 
 /* Function cellClicked() is called
